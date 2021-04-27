@@ -9,8 +9,15 @@ public class MouseDrag : MonoBehaviour
     [SerializeField] private float mZCoordFromInspector;
     [SerializeField] private float modX;
     [SerializeField] private Vector3 mOffset;
-   
 
+
+    private void Update()
+    {
+        if(transform.position.x>6 || transform.position.x<-5)
+        {
+            transform.position = new Vector3(0, transform.position.y, transform.position.z);
+        }
+    }
     private float mZCoord;
     private void OnMouseDown()
     {
