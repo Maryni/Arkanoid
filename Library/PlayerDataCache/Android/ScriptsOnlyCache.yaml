@@ -76,7 +76,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13836}
     - Class: 114
-      Script: {instanceID: 18818}
+      Script: {instanceID: 13898}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -390,7 +390,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: d1dbf7197d7be54ee374625a992cfacc
+      Hash: 194b3821cbf24295ee98d47c386477f5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MouseDrag
@@ -528,17 +528,17 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: c3d3430df9e3ea95e3e3d587961390fb
-    assemblyName: Unity.Timeline.dll
-    namespaceName: UnityEngine.Timeline
-    className: PlayableTrack
-  - hash:
-      serializedVersion: 2
       Hash: 9643333f67df606536988f9d76a5fcfa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScoreActions
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: PlayableTrack
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Unity/Arkanoid/Arkanoid/Build/v1.apk
+  playerPath: C:/Unity/Arkanoid/Arkanoid/Build/v1.0a.apk

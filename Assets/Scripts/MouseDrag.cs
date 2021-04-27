@@ -7,6 +7,7 @@ public class MouseDrag : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private bool needToChangeZ;
     [SerializeField] private float mZCoordFromInspector;
+    [SerializeField] private float modX;
     private Vector3 mOffset;
    
 
@@ -41,6 +42,7 @@ public class MouseDrag : MonoBehaviour
             if (transform.position.x > 5) { temp.x -= 0.1f; }
             if (transform.position.x < 5) { temp.x += 0.1f; }
             transform.position = temp + mOffset;
+            transform.position = new Vector3(transform.position.x * modX,transform.position.y,transform.position.z);
         }
         
     }
