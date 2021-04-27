@@ -1234,7 +1234,8 @@ MonoBehaviour:
   cam: {fileID: 963194227}
   needToChangeZ: 0
   mZCoordFromInspector: -2.25
-  modX: 2
+  modX: 6
+  mOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1095464881
 GameObject:
   m_ObjectHideFlags: 0

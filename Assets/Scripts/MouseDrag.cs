@@ -8,7 +8,7 @@ public class MouseDrag : MonoBehaviour
     [SerializeField] private bool needToChangeZ;
     [SerializeField] private float mZCoordFromInspector;
     [SerializeField] private float modX;
-    private Vector3 mOffset;
+    [SerializeField] private Vector3 mOffset;
    
 
     private float mZCoord;
@@ -18,7 +18,7 @@ public class MouseDrag : MonoBehaviour
         if (needToChangeZ && mZCoordFromInspector != 0) mZCoord = mZCoordFromInspector;
 
         mOffset = gameObject.transform.position - GetMouseWorldPos();
-        mOffset = new Vector3(transform.position.x,mOffset.y, mOffset.z);
+       // mOffset = new Vector3(transform.position.x,mOffset.y, mOffset.z);
     }
     private Vector3 GetMouseWorldPos()
     {
@@ -30,19 +30,26 @@ public class MouseDrag : MonoBehaviour
     private void OnMouseDrag()
     {
         Vector3 temp;
+        Vector3 tempPlusOffset;
         //print(GetMouseWorldPos());
         temp = GetMouseWorldPos();
         if (transform.position.x>=-5 && transform.position.x<=5)
         {
-            temp.x = -temp.x;
-            transform.position = temp + mOffset;
-        }else if(transform.position.x>5 || transform.position.x<5)
+             
+            tempPlusOffset = temp + mOffset;
+            tempPlusOffset = new Vector3(tempPlusOffset.x * modX, tempPlusOffset.y, tempPlusOffset.z);
+            tempPlusOffset.x = -tempPlusOffset.x;  //for normal <-x-> moving cuz else - it's reverte
+            transform.position = tempPlusOffset;
+        }
+        else if(transform.position.x>5 || transform.position.x<5)
         {
             
             if (transform.position.x > 5) { temp.x -= 0.1f; }
             if (transform.position.x < 5) { temp.x += 0.1f; }
-            transform.position = temp + mOffset;
-            transform.position = new Vector3(transform.position.x * modX,transform.position.y,transform.position.z);
+
+            tempPlusOffset = temp + mOffset;
+            tempPlusOffset = new Vector3(tempPlusOffset.x * modX, tempPlusOffset.y, tempPlusOffset.z);
+            transform.position = tempPlusOffset;
         }
         
     }

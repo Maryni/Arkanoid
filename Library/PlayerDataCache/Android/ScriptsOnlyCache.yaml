@@ -390,7 +390,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 194b3821cbf24295ee98d47c386477f5
+      Hash: 9f648026bde23bee85d10348e9cd20b9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MouseDrag
@@ -541,4 +541,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Unity/Arkanoid/Arkanoid/Build/v1.0a.apk
+  playerPath: C:/Unity/Arkanoid/Arkanoid/Build/v1.0c.apk
